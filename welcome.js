@@ -71,8 +71,11 @@ module.exports = function (client) {
         .setColor("RANDOM")
         .setTimestamp()
         .setFooter("Welcome", member.guild.iconURL({ dynamic: true }))
-        .setDescription(`**Welcome to ${member.guild.name}!**
-      Hi <@${member.id}>!, read and accept the rules!`)
+        .addField("Member Name:", `<@${member.user.id}>`, true)
+        .addField("Member id:", `${member.user.id}`, true)
+        .addField("Total Member:", `${member.guild.memberCount}`, true)
+        .addField("Server:", `${member.guild.name}`, true)
+        .setColor('RANDOM')
         .setImage("attachment://welcome-image.png")
         .attachFiles(attachment);
       //define the welcome channel
