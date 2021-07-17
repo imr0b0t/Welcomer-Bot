@@ -89,4 +89,4 @@ module.exports = function (client) {
     })
 }
 
-//Coded by Navaneeth K M!
+//Code Editor @MrRobot#6067
